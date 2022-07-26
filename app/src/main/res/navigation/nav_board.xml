@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_board"
+    app:startDestination="@id/moviesFragment">
+
+    <fragment
+        android:id="@+id/moviesFragment"
+        android:name="eu.hanna.movies.fragments.PopularFragment"
+        android:label="fragment_movies"
+        tools:layout="@layout/fragment_popular" >
+        <action
+            android:id="@+id/action_moviesFragment_to_detailMoviesActivity"
+            app:destination="@id/detailMoviesActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="eu.hanna.movies.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_detailMoviesActivity"
+            app:destination="@id/detailMoviesActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/detailMoviesActivity"
+        android:name="eu.hanna.movies.activities.DetailMoviesActivity"
+        android:label="activity_detail_movies"
+        tools:layout="@layout/activity_detail_movies" />
+    <fragment
+        android:id="@+id/latestFragment2"
+        android:name="eu.hanna.movies.fragments.LatestFragment"
+        android:label="fragment_latest"
+        tools:layout="@layout/fragment_latest" >
+        <action
+            android:id="@+id/action_latestFragment2_to_detailMoviesActivity"
+            app:destination="@id/detailMoviesActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/upcomingFragment2"
+        android:name="eu.hanna.movies.fragments.UpcomingFragment"
+        android:label="fragment_upcoming"
+        tools:layout="@layout/fragment_upcoming" >
+        <action
+            android:id="@+id/action_upcomingFragment2_to_detailMoviesActivity"
+            app:destination="@id/detailMoviesActivity" />
+    </fragment>
+</navigation>
